@@ -29,6 +29,10 @@ p,span {
  color: #354259;
  font-family: 'Montserrat', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
 /*--------------------------- class selectors ---------------------*/
 .nameJobDiv {
   margin-top: 100px;
