@@ -1,0 +1,36 @@
+h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  color: #354259;
+}
+
+body {
+  margin: 0;
+  background-color: #E3FDFD;
+  padding-top: 130px;
+}
+
+.content {
+ font-size: 20px;
+ color: #354259;
+ font-family: 'Montserrat', sans-serif;
+ padding: 50px;
+ line-height: 30px;
+}
+
+.inlineTitle {
+  font-weight: bold;
+}
+
+
+
+.HomeLink{
+  top: 50px;
+  left: 20px;
+  position: absolute;
+  display: inline;
+  font-weight: bolder;
+  color: #354259;
+  font-family: 'Montserrat', sans-serif;
+}

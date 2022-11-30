@@ -1,0 +1,36 @@
+
+.swiftCode {
+    width: inherit;
+    margin: 50px;
+    display: block;
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: #a9bcbc;
+    line-height: 1.4em;
+    overflow-x: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    font-size: 15px;
+}
+
+
+.switch, .word ,.case, .enum, .control, .func, .attribute, .dataType {
+  color: #F06292;
+}
+
+.call {
+  color: #BA94D1;
+}
+
+.outerCall {
+  color: #59C1BD;
+}
+
+.string {
+  color: #E97777;
+}
+
+.methodName {
+  color: #009EFF;
+}

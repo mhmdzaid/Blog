@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../css/DCallable.css">
+  <link rel="stylesheet" href="../../css/code.css">
+  <title> DynamicCallable attribute</title>
+</head>
+
+<body>
+  <a href="../../index.html"> <h3 class= "HomeLink"> Home </h3> </a>
+  <h1> DynamicCallable attribute </h1>
+  <p class="content"> <span class="inlineTitle ">DynamicallyCallable </span> attribute could be applied to instances of classes, structure, enums and protocols to be treated as a callable function.<br />
+    the type must implement <span class="inlineTitle ">dynamicallyCall(withArguments:)</span> method that must have a single parameter that conforms to the <span class="inlineTitle">ExpressibleByArrayLiteralor </span><br/>
+  </p>
+
+  <code class="swiftCode">
+    <span class="attribute">@dynamicCallable</span>
+    <span class="enum">enum</span> User {
+      <span class="case">case</span> normal
+      <span class="case">case</span> premium
+
+    <span class="func">func</span> <span class="methodName">dynamicallyCall</span>(withArguments ids: [<span class="dataType">Int</span>]) {
+      <span class="control">if</span> ids.<span class="call">isEmpty</span> {
+        <span class="call">print</span>(<span class="string">"please pass user id"</span>)
+        <span class="return">return</span>
+      }
+      <span class="switch">switch self</span> {
+        <span class="case">case</span> .normal:
+          print(<span class="string">"normal user with id : </span>\(ids.<span class="call">first</span> ?? 0)<span class="string">"</span>)
+
+        <span class="case">case</span> .premium:
+          <span class="call">print</span>(<span class="string">"premium user with id : </span>\(ids.<span class="call">first</span> ?? 0)<span class="string">"</span>)
+      }
+    }
+
+    <span class="word">let</span> ryan = User.<span class="call">normal</span>
+    <span class="outerCall">ryan</span>(98)
+
+    // normal user with id : 98
+
+ </code>
+<p class="content">
+ or you can use
+ <span class="inlineTitle ">dynamicallyCall(withKeywordArguments:)</span> that must have a single parameter that conforms to the <span class="inlineTitle">ExpressibleByDictionaryLiteral</span> <br>
+ which allows you to include labels to the call
+ or implement them
+ <span class="inlineTitle">both </span>
+</p>
+ <code class="swiftCode">
+    <span class="func">func</span> <span class="methodName">dynamicallyCall</span>(withKeywordArguments info: Dictionary &#60;<span class="dataType">String</span>, <span class="dataType">String</span>&#62;) {
+        info.<span class="call">map</span>({
+          <span class="call">print</span>("\($0.<span class="call">key</span>) : \($0.<span class="call">value</span>)")
+        })
+      }
+    }
+
+    <span class="outerCall">ryan</span>(name: <span class="string">"Mohamed", address: "13 nile street", nationalNumber: "29832101022322"</span>)
+
+    // nationalNumber : 29832101022322
+    // name : Mohamed
+    // address : 13 nile street
+
+  </code>
+</body>
+
+</html>
