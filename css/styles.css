@@ -196,14 +196,15 @@ margin-left: -70px;
 }
 
 .CardView {
+  background-color: white;
   padding: 20px;
   padding-right:40px;
   text-align: center;
   width: 250px;
-  height: 250px;
-  background-color: #CBF1F5;
+  height: 200px;
   border-radius: 15px;
   margin: 0;
+  box-shadow: 5px 10px 10px 10px lightBlue;
 }
 
 .CardTitle {
@@ -211,5 +212,5 @@ margin-left: -70px;
   top: 80px;
   width: 100px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
