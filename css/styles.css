@@ -34,6 +34,10 @@ a {
   text-decoration: none;
   color: #354259;
 }
+
+a.active {
+ background-color:#E3FDFD;
+}
 /*--------------------------- class selectors ---------------------*/
 .nameJobDiv {
   margin-top: 100px;
@@ -52,7 +56,7 @@ a {
 }
 .hi {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
   font-family: 'Caveat', cursive;
 }
 
@@ -178,20 +182,9 @@ margin-left: -70px;
   left: 20px;
 }
 
-.HomeLink, .swiftLink , .aboutMelink {
-  top: 50px;
-  position: absolute;
-  display: inline;
-  font-weight: bolder;
-  color: #354259;
-  font-family: 'Montserrat', sans-serif;
-}
-
-
 .gridView {
   position: absolute;
-  top: 100px;
-  padding: 50px;
+  padding: 0px 50px 50px 50px;
   margin: 100px auto;
 }
 
@@ -213,4 +206,28 @@ margin-left: -70px;
   width: 100px;
   font-family: 'Montserrat', sans-serif;
   font-size: 25px;
+}
+
+.navBar {
+  background-color: #344D67;
+  overflow: hidden;
+  height: 50px;
+}
+
+.navBar a {
+ float: left;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 0px 16px;
+ text-decoration: none;
+ font-size: 17px;
+ display: inline;
+ font-weight: bolder;
+ color: white;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.navBar a:hover {
+  background-color: #E3FDFD;
+  color: black;
 }

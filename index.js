@@ -9,3 +9,10 @@ $(".CardView").mouseenter(function() {
       height: '-=' + "30px"
     }, 250);
 })
+
+console.log($(".navBar a").length);
+let items = $(".navBar a")
+items.click(function() {
+  items.removeClass("active");
+  $(this).addClass("active");
+});
